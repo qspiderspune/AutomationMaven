@@ -38,7 +38,7 @@ public class EnterTimeTrack {
 		actittimelink.click();
 	}
 	public String getVersion() throws InterruptedException {
-		Thread.sleep(1000);
+		Thread.sleep(2000);
 	return	version.getText();
 	}
 	
