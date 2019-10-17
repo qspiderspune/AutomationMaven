@@ -19,16 +19,13 @@ public class BaseClass {
 public WebDriver driver;
 public FileLib f=new FileLib();
 
-//@Parameters("Browser")
-//@BeforeTest
+
 @BeforeClass
 public void launchBrowser() throws Exception {
 	String BrowserName = f.getPropertyData("browser");
-	
-	if(BrowserName.equals("chrome")) {
+		if(BrowserName.equals("chrome")) {
 		driver=new ChromeDriver();
-		
-	}
+		}
 	else if(BrowserName.equals("firefox")) {
 	//	driver=new FirefoxDriver();
 		}
@@ -46,9 +43,6 @@ public void login() throws Exception {
 	driver.get(URL);
 	LoginPage l=new LoginPage(driver);
 	l.setUser(UserName, PassWord);
-//	driver.findElement(By.id("username")).sendKeys(UserName);
-//	driver.findElement(By.name("pwd")).sendKeys(PassWord);
-//	driver.findElement(By.xpath("//div[text()='Login ']")).click();
 }
 public void waitForPageToLoad() {
 	driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
@@ -58,6 +52,6 @@ public void logout() throws InterruptedException {
 Thread.sleep(3000);
 EnterTimeTrack e=new EnterTimeTrack(driver);
 e.logoutClick();
-//	driver.findElement(By.linkText("Logout")).click();
+
 }
 }

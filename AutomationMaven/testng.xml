@@ -4,7 +4,7 @@
   <test name="Test">
     <classes>
       <class name="com.actitime.test.CreateCustomer"/>
-      <class name="com.actitime.test.VerifyBuild"/>
+      
     </classes>
   </test> <!-- Test -->
 </suite> <!-- Suite -->
