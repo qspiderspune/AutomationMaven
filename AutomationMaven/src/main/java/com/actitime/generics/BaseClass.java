@@ -15,6 +15,7 @@ import com.actitime.pom.LoginPage;
 public class BaseClass {
 	static {
 		System.setProperty("webdriver.chrome.driver", "./drivers/chromedriver.exe");
+		System.setProperty("webdriver.gecko.driver", "./drivers/geckodriver.exe");
 	}
 public WebDriver driver;
 public FileLib f=new FileLib();

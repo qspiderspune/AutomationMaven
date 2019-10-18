@@ -26,7 +26,8 @@ public String getPropertyData(String key) throws Exception {
 	String value = p.getProperty(key);
 	return value;
 }
-/**
+
+/** 
  * to read the data from excel file
  * @param sheetname
  * @param rownum
